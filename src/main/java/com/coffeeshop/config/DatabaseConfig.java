@@ -152,6 +152,13 @@ public class DatabaseConfig {
             insertUser.setString(3, "kasir");
             insertUser.setString(4, "Budi Santoso");
             insertUser.execute();
+
+            insertUser.setString(1, "manager");
+            insertUser.setString(2, "manager123");
+            insertUser.setString(3, "manager");
+            insertUser.setString(4, "Manager Toko");
+            insertUser.execute();
+
             insertUser.close();
         }
         checkUser.close();

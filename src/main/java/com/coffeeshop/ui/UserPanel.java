@@ -138,7 +138,7 @@ public class UserPanel extends JPanel {
 
         JTextField tfUsername = UITheme.styledField(16);
         JTextField tfNama     = UITheme.styledField(16);
-        JComboBox<String> cbRole = new JComboBox<>(new String[]{"kasir", "admin"});
+        JComboBox<String> cbRole = new JComboBox<>(new String[]{"kasir", "manager", "admin"});
         cbRole.setFont(UITheme.FONT_BODY);
         JPasswordField pfPass = existing == null ? UITheme.styledPasswordField(16) : null;
 

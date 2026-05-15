@@ -22,4 +22,5 @@ public class SessionManager {
     public User getCurrentUser() { return currentUser; }
     public boolean isLoggedIn() { return currentUser != null; }
     public boolean isAdmin() { return currentUser != null && currentUser.isAdmin(); }
+    public boolean isManager() { return currentUser != null && currentUser.isManager(); }
 }

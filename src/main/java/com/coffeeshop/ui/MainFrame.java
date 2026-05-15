@@ -102,10 +102,13 @@ public class MainFrame extends JFrame {
 
         // Nav items
         sidebar.add(navItem("🏠", "Dashboard", "dashboard"));
-        sidebar.add(navItem("🛒", "Kasir / Transaksi", "kasir"));
-        sidebar.add(navItem("☕", "Menu & Stok", "menu"));
-        sidebar.add(navItem("🎁", "Promosi & Diskon", "promosi"));
-        sidebar.add(navItem("📊", "Laporan", "laporan"));
+
+        if (!SessionManager.getInstance().isManager()) {
+            sidebar.add(navItem("🛒", "Kasir / Transaksi", "kasir"));
+            sidebar.add(navItem("☕", "Menu & Stok", "menu"));
+            sidebar.add(navItem("🎁", "Promosi & Diskon", "promosi"));
+            sidebar.add(navItem("📊", "Laporan", "laporan"));
+        }
 
         // Admin only menu
         if (SessionManager.getInstance().isAdmin()) {

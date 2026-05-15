@@ -32,6 +32,7 @@ public class User {
     public String getNama() { return nama; }
     public void setNama(String nama) { this.nama = nama; }
     public boolean isAdmin() { return "admin".equals(role); }
+    public boolean isManager() { return "manager".equals(role); }
 
     @Override
     public String toString() { return nama + " (" + role + ")"; }
